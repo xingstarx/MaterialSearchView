@@ -13,12 +13,22 @@ Maybe it would be useful to take a look into the new official approach
 http://www.materialdoc.com/search-filter/
 
 # Usage
-**Add the dependencies to your gradle file:**
+Add it in your root build.gradle at the end of repositories:
 ```javascript
-	dependencies {
-    	compile 'com.miguelcatalan:materialsearchview:1.4.0'
+allprojects {
+		repositories {
+			maven { url 'https://jitpack.io' }
+		}
 	}
 ```
+
+Add it in your module build.gradle:
+```javascript
+dependencies {
+	  compile 'com.github.xingstarx:MaterialSearchView:v1.4.1'
+	}
+```
+
 **Add MaterialSearchView to your layout file along with the Toolbar** *(Add this block at the bottom of your layout, in order to display it over the rest of the view)*:
 
 ```xml
