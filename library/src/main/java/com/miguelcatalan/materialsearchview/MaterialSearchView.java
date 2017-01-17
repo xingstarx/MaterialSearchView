@@ -212,11 +212,20 @@ public class MaterialSearchView extends FrameLayout implements Filter.FilterList
         }
     }
 
+    public void setOnBackListener(OnClickListener onClickListener) {
+        mOnBackListener = onClickListener;
+    }
+
+    private OnClickListener mOnBackListener;
+
     private final OnClickListener mOnClickListener = new OnClickListener() {
 
         public void onClick(View v) {
             if (v == mBackBtn) {
                 closeSearch();
+                if (mOnBackListener != null) {
+                    mOnBackListener.onClick(v);
+                }
             } else if (v == mVoiceBtn) {
                 onVoiceClicked();
             } else if (v == mEmptyBtn) {
