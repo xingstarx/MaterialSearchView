@@ -25,7 +25,7 @@ allprojects {
 Add it in your module build.gradle:
 ```javascript
 dependencies {
-	  compile 'com.github.xingstarx:MaterialSearchView:v1.4.1'
+	  compile 'com.github.xingstarx:MaterialSearchView:v1.4.2'
 	}
 ```
 
